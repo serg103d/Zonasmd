@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <script src="js/jquery.js"></script>
+
+    <script src="js/jquery.dataTables.min.js"></script>
+    
+    <script src="//code.tidio.co/iljvoqsol8c8vwfbn0tma6j9ycq3vzv2.js" async></script>
+
+  <title>Zona películas</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  body{
+    background-color:;
+    height: 100vh;
+   background-image: url('/img/fondo.gif');
+    background-size: 100% 100%;
+  }
+  .content{
+opacity: .9;
+    height: 100%;
+    background-color: #000000;
+    overflow-y: scroll;
+  }
+  .int{
+  border-top: solid #20FF00;
+	border-left: solid #20FF00;
+	border-right: solid #FF0000;
+	border-bottom: solid #FF0000;
+  background-size: 100% 100%;
+  height: 200px;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+  .int h4{
+    width: 150px;
+    margin: 2px;
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 5px;
+  }
+  .int p{
+    background-color: #FF00D2;
+    color: #00FF56;
+    border-radius: 5px;
+    text-align: center;
+    
+    padding: 4px;
+  }
+    .slider{
+    display: flex;
+    overflow-x: auto;
+  }
+  .generos h3{
+    color: #03F70B;
+    
+  }
+  .generos{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .kit{
+    display: none;
+  }
+  .search input{
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 80%;
+    border: solid #00FF08;
+    padding: 5px;
+  }
+  .search button{
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 5px;
+    border: solid #00FF08;
+  }
+  .search{
+    margin: 4px;
+  }
+  .gen a {
+    margin: 5px;
+    font-size: 15px;
+    background-color: #F400FF;
+    border: solid #FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    color: #FFFFFF
+  }
+  .gen{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .menu{
+    background-color: #2E312F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+ background-image: url('https://media.tenor.com/c_1cG4o53fYAAAAC/thunder-red.gif');
+    background-size: 100% 100%;
+  }
+  .gener p{
+    color: #00FF08;
+    text-align: center;
+    font-size: 30px;
+  }
+  #btn1{
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 10px;
+   color: #FF0000;
+   border: solid #00FF22;
+   border-radius: 5px;
+  }
+  .ms{
+    display: none;
+   
+  }
+  .lg h4{
+    color: #00FF22;
+    font-size: 35px;
+  }
+  .m-nu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .m-nu a{
+    color: #00FF22;
+  }
+
+.logo h3{
+  color: #FFFFFF;
+  font-family: cursive;
+}
+.logo h4{
+  color: #01D5EF;
+  font-family: cursive;
+}
+.logo{
+  display: flex;
+  font-size: 30px;
+}
+.lg{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+ .caja{
+   border-top: double #00FF01 2px;
+   border-bottom: inset #FF0000 2px;
+   margin: 20px 0 20px 0;
+   border-radius: 15px;
+   padding: 10px 0 10px 0;
+   background: #000000;
+   
+ }
+ .ver img{
+   height: 50px;
+ }
+ .ver{
+   background-color: #000000;
+   opacity: 0.6;
+ }
+
+ .es{
+   display: flex;
+   justify-content: space-around;
+   padding: 5px;
+   opacity: 0.7;
+ }
+ .es h5{
+   color: #00FC55;
+   padding: 4px;
+   border-radius: 5px;
+   background: #FF00D2;
+ }
+ 
+ 
+ /*-----slider------*/
+ 
+
+  .slider2 p{
+    text-align: center;
+    font-size: 25px;
+    font-family: cursive;
+    color: #00F239;
+   
+    opacity: 0.7;
+   
+   
+  }
+    .slider2 {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	background:;
+	
+}
+
+.slider2 ul {
+	display: flex;
+	padding: 5px 0 5px 0;
+	width: 600%;
+background:;
+	animation: cambio 30s infinite alternate linear;
+}
+
+.slider2 li {
+	width: 100%;
+	list-style: none;
+	border-top: solid #20FF00;
+	border-left: solid #20FF00;
+	border-right: solid #FF0000;
+	border-bottom: solid #FF0000;
+	border-radius: 15px;
+	margin-right: 5px;
+	background: #000000;
+	opacity: .7;
+	padding: 5px;
+}
+
+.slider2 img {
+	width: 100%;
+	height: 150px;
+	border-radius: 15px;
+	
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	10% {margin-left: 0;}
+	
+	20% {margin-left: -100%;}
+	30% {margin-left: -100%;}
+   
+   40% {margin-left: -200%;}
+	50% {margin-left: -200%;}
+	
+	60% {margin-left: -300%;}
+	70%{margin-left: -300%;}
+	80%{margin-left: -400%;}
+	90%{margin-left: -400%;}
+	95%{margin-left: -500%;}
+	100% {margin-left: -500%;}
+} 
+/*------slider fin------*/
+
+.calidad{
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  position: absolute;
+  color: #FFFFFF;
+  background: #C700FF;
+}
+#gen{
+  background: #FF0000;
+  margin: 5px;
+  color: #FFFFFF;
+  opacity: .8;
+}
+#inf{
+  color: #FFFFFF;
+  background: #FF0000;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.m-nu p:hover{
+  background: #FF00F0;
+  color: #00FF47;
+}
+.inform{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  background: #000000;
+  padding: 5px;
+}
+.inform iframe{
+  width: 100%;
+  height: 90%;
+}
+#c_r{
+  color: #FFFFFF;
+  background: #FF0000;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 10px;
+}
+.quitar{
+  display: none;
+}
+.brave{
+  padding: 5px;
+  border: solid #1DFF00 1px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.brave p{
+  color: #FFFFFF;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  padding: 4px;
+  font-size: 25px;
+}
+.b_int{
+  display: flex;
+  justify-content: space-around;
+ padding: 5px;
+ margin-top: 20px;
+}
+.b_int a{
+  color: #FFFFFF;
+  background: #FF0000;
+  padding: 4px;
+  border-radius: 5px;
+}
+.b_int button{
+  color: #FFFFFF;
+  background: #FF0000;
+  padding: 4px;
+  border-radius: 5px;
+  border-style: none;
+}
+.botones{
+  display: flex;
+  align-items: center;
+}
+.botones button{
+  color: #FFFFFF;
+  background: #FF0000;
+  width: 30px;
+ height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 0 10px 0 10px;
+}
+.btn2{
+  width: 80px!important;
+}
+.ventana{ 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  background: #000000;
+}
+#vent{
+color: #FFFFFF;
+  background: #FF0000;
+  width: 30px;
+ height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin: 10px;
+}
+.ocult{
+  display: none;
+}
+</style>  
+
+<div id="ctn" class="menu ms">
+  <buttton id="btn1">x</buttton>
+  
+  
+   <header>
+
+    <input type="search" id="input-search" placeholder="Buscar aqui">
+
+    
+    <div class="content-search">
+        <div class="content-table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>
+                      </td>
+                    </tr>
+                </thead>
+               <tbody>
+              <tr>
+<td><a href="../generos/accion.html">películas de acción</a></td>
+          </tr>
+         <tr>
+ <td><a href="peliculas/alita.html">Alita Battle Angel</a></td>
+ </tr>
+                    
+ <tr>
+<td><a href="peliculas/morbius.html">Morbius</a></td>
+            </tr>
+                    
+               <tr>
+<td><a href="peliculas/jung_e.html">JUNG_E</a></td>
+                 </tr>
+                    
+                    <tr>
+<td><a href="peliculas/que le paso a lunes.html">Que le pasó a lunes</a></td>
+                    </tr>
+                    
+                       <tr>
+<td><a href="peliculas/el gato con botas.html">El gato con botas el último deseo</a></td>
+                    </tr>
+                    
+                      <tr>
+<td><a href="peliculas/megan.html">Megan</a></td>
+                    </tr>
+                    
+                       <tr>
+<td><a href="peliculas/la maldicion 2021.html">La Maldición el despertar de los muertos</a></td>
+                    </tr>
+                    
+                       <tr>
+<td><a href="peliculas/la niñera.html">La Niñera</a></td>
+                    </tr>
+                    
+                      <tr>
+<td><a href="peliculas/scream5.html">Scream 5</a></td>
+                    </tr>
+                    
+                      <tr>
+<td><a href="peliculas/bloodshot.html">Bloodshot</a></td>
+                    </tr>
+                    
+                      <tr>
+<td><a href="peliculas/rampage.html">Rampage Devastación</a></td>
+                    </tr>
+                    <tr>
+<td><a href="peliculas/godzilla vs kong.html">Godzilla vs kong</a></td>
+                    </tr>
+<tr>
+  <td><a href="series/hawkeye.html">Hawkeye</a></td>
+</tr>
+
+<tr>
+  <td><a href="peliculas/elysium.html">Elysium</a></td>
+</tr>
+
+<tr>
+  <td><a href="peliculas/matrix4.html">Matrix 4 Resurrecciónes</a></td>
+</tr><tr>
+  <td><a href="series/lockwood.html">Lockwood y co.</a></td>
+</tr>
+<tr>
+  <td><a href="peliculas/pinocho.html">Pinocho De Guillermo del toro</a></td>
+</tr>
+
+<tr>
+  <td><a href="peliculas/depredador la presa.html">Depredador La Presa</a></td>
+</tr>
+
+<tr>
+  <td><a href="peliculas/resident evil final.html">Resident Evil 6 Capitulo Final</a></td>
+</tr>
+<tr>
+  <td><a href="peliculas/winnie pooh.html">Winnie the Pooh: Sangre y Miel</a></td>
+</tr>
+<tr>
+  <td><a href="peliculas/snow falls.html">Snow  Falls</a></td>
+</tr>
+<tr>
+  <td><a href="peliculas/la maldicion vs el aro.html">El Aro vs. La Maldición</a></td>
+</tr>
+<tr>
+  <td><a href="peliculas/dc super mascotas.html">DC Liga De Súpermascotas</a></td>
+</tr>
+<tr>
+  <td><a href="peliculas/minions4.html">Minions: 4 El origen de Gru</a></td>
+</tr>
+  <tr>
+    <td><a href="peliculas/mega mente.html">Mega Mente</a></td>
+  </tr>  
+  <tr style="background-image: url('https://kpopletsgonews.net/wp-content/uploads/2022/10/alquimia-de-almas-2e280b3-ya-tiene-fecha-de-estreno-cuando-y-donde-ver-el-popular-drama-780x470.jpg'); background-size: 100% 100%;">
+    <td><a href="series/alquimia de almas/info.html">Alquimia de almas</a></td>
+  </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</header>
+  
+  
+  
+  
+  <div class="gener">
+    <p>Generos:</p>
+  <div class="gen">
+    <a href="generos/accion.html">Acción</a>
+    <a href="generos/artes marciales.html">Artes marciales</a>
+    <a href="generos/animacion.html">Animación</a>
+    <a href="generos/aventura.html">Aventura</a>
+  
+    
+      <a href="generos/comedia.html">Comedia</a>
+      <a href="generos/ciencia ficcion.html">Ciencia ficción</a>
+      <a href="generos/corea.html">Corea</a>
+    <a href="generos/drama.html">Drama</a>
+    <a href="generos/dorama.html">Doramas</a>
+  
+    
+      <a href="generos/infantil.html">Infantil</a>
+      <a href="generos/japon.html">Japón</a>
+      <a href="generos/romance.html">Romance</a>
+    
+    
+    <a href="generos/suspenso.html">Suspenso</a>
+    <a href="generos/terror.html">Terror</a>
+    <a href="generos/vampiros.html">Vampiros</a>
+    <a href="generos/zombies.html">Zombies</a>
+    </div>
+  </div>
+  <div class="contacto">
+        <h3>contactame</h3>
+    <div class="iconos">
+    <a href="whatsapp://send?text=texto_mensaje&phone=3325817314"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsQ9v0mrOXIHlptCdtSj6OYbDadivRC9XCxA&usqp=CAU" width="40" height="50" alt=""></a>
+     <a href="smsto:7531110805?body=texto_del_mensaje"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfAIQ0eS0rpfsfxXiL87LoOWlLnXtc5Qe0Bg&usqp=CAU" width="50" height="50" alt=""></a>
+     
+      <a href="mailto:serg10md9@gmail.com"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz223UPMInB7DQnCXNeipNloEjWpFi8g0W4A&usqp=CAU" width="50" height="50" alt=""></a>
+ 
+  <a href="#"><img src="https://i.ibb.co/H23H1rp/youtube.png" style="border-bottom: solid red; border-right: solid red; border-width: 1px;" width="50" height="50"></a>
+ 
+   </div> 
+</div>
+
+<div class="firma">
+    <div class="firma-int">
+        <h3>Zonas.m.d</h3>
+        <p>Creado Por</p> <h3>Sergio.M.D</h3>
+    </div>
+</div>
+  
+  
+</div>
+
+  
+  
+ <div id="body" class="content">
+   <div class="lg">
+     <h4 id="open">🔍</h4>
+     <p id="inf">!</p>
+   <div class="logo">
+     <h3>ZONA</h3>
+     <h4>PELÍCULAS</h4>
+   </div>
+   </div>
+   
+
+ 
+ 
+   <div class="m-nu">
+     
+     <a href="p.paginas/peliculas.html">Todas las películas</a>
+     <a href="#">Todas las series</a>
+     <a href="#">Anime</a>
+     
+   </div>
+   
+   
+   
+   <div class="iframe">
+     
+   <div class="slider2">
+    <ul>
+      <li><a href="peliculas/winnie pooh.html">
+        <b class="calidad">Cam</b>
+        <img src="https://rechismes.com/wp-content/uploads/2022/09/WINNIE-THE-POOH-1.jpg" alt="">
+        <p>Winnie the Pooh: Sangre y Miel</p>
+      </a></li>
+      <li><a href="peliculas/snow falls.html">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTBjMWNjOWYtM2ExYy00MzliLTkzZjMtMzZiNmE1ODdhZjBhXkEyXkFqcGdeQXVyNTM1NTEyMzU@._V1_FMjpg_UX1000_.jpg" alt="">
+        <p>Snow Falls</p>
+      </a></li>
+      <li><a href="peliculas/matrix4.html">
+        <img src="https://www.peliculas-hd.net/storage/movies_tumbl/matrix-resurrecciones-cover-8fv.jpg" alt="">
+        <p>Matrix Resurrección</p>
+      </a></li>
+      <li><a href="peliculas/morbius.html">
+        <img src="https://www.peliculas-hd.net/storage/movies_tumbl/morbius-cover-bcq.jpg" alt="">
+        <p>Morbius</p>
+      </a></li>
+      <li><a href="peliculas/the mummy.html">
+        <img src="https://cdn.moviefone.com/image-assets/984105/d0pt6KlVvmtG0uhccWjgWfIqJee.jpg?d=360x540&q=60" alt="">
+        <p>The Mummy Resurrection</p>
+      </a></li>
+      
+      <li>
+      <img src="https://s3-eu-west-1.amazonaws.com/abandomedia/db/poster/db_posters_53561.jpg" alt="">  
+        <p>La masacre en Texas</p>
+      </li>
+      
+    </ul>
+  </div>
+      
+  
+   </div>
+   
+         <div class="caja">
+     <div class="generos">
+     <h3>Lo Mejor Del 2022 /2023 </h3>
+     <div class="ver">
+       <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+     </div>
+     </div>
+      <div class="slider">
+         
+<a href="peliculas/jung_e.html"><div class="int" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMzNmZWRlNjctMDBkYS00YWY3LTkzMDMtMzgyNTIxYTYwZjNkXkEyXkFqcGdeQXVyMTA3MTI2ODc5._V1_.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>JUNG_E</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2023</p>
+     </div>
+        </div></a>
+        
+<a href="peliculas/winnie pooh.html"><div class="int" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqMUHsAnH5aM-z-118e0qwK9IxjQoSubUFWg&usqp=CAU');">
+    <p id="gen">Terror/Slasher</p>
+  <h4>Winnie the Pooh: Sangre y Miel</h4>
+  
+     <div class="es">
+       <h5>película</h5>
+       <p>Cam</p>
+       <p> 2023</p>
+     </div>
+        </div></a>
+        
+          
+<a href="peliculas/snow falls.html"><div class="int" style="background-image: url('https://m.media-amazon.com/images/M/MV5BOTBjMWNjOWYtM2ExYy00MzliLTkzZjMtMzZiNmE1ODdhZjBhXkEyXkFqcGdeQXVyNTM1NTEyMzU@._V1_FMjpg_UX1000_.jpg');">
+  <p id="gen">Terror/Suspenso</p>
+  <h4>Snow Falls</h4>
+  
+     <div class="es">
+       <h5>película</h5>
+       
+       <p> 2023</p>
+     </div>
+        </div></a>      
+       
+<a href="peliculas/el gato con botas.html"><div class="int" style="background-image: url('https://la-lista.com/wp-content/uploads/2022/12/estreno-gato-con-botas.jpg');">
+  <p id="gen">Aventura/Comedia</p>
+  <h4>El gato con botas el último deseo</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2022</p>
+     </div>
+      </div></a>
+      
+<a href="peliculas/pinocho.html"><div class="int" style="background-image: url('https://www.awn.com/sites/default/files/styles/large_featured/public/image/featured/poster-cropped1280x720_18.jpg?itok=P270x3-d');">
+  <p id="gen">Fantasía/Musical</p>
+  <h4>Pinocchio</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2023</p>
+     </div>
+      </div></a>
+       
+<a href="peliculas/matrix4.html"><div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/matrix-resurrecciones-cover-8fv.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Matrix Resurecciónes</h4>
+   <div class="es">
+     <h5>película</h5>
+  
+     <p> 2022</p>
+   </div>
+   
+       </div></a>
+       
+ <a href="peliculas/the mummy.html"><div class="int" style="background-image: url('https://cdn.moviefone.com/image-assets/984105/d0pt6KlVvmtG0uhccWjgWfIqJee.jpg?d=360x540&q=60');">
+  <p id="gen">Terror/Suspenso</p>
+  <h4>The Mummy Resurrection</h4>
+   <div class="es">
+     <h5>película</h5>
+  
+     <p> 2023</p>
+   </div>
+   
+       </div></a>      
+       
+       
+<a href="peliculas/depredador la presa.html"><div class="int" style="background-image: url('https://image.tmdb.org/t/p/w1280/49ldE9yPMkYCrTLEpdhJgqlQXYK.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Depredador La Presa</h4>
+   <div class="es">
+     <h5>película</h5>
+  
+     <p> 2022</p>
+   </div>
+   
+       </div></a>
+       
+       
+       
+     </div>
+     
+     
+     
+   </div>
+   
+   <div class="caja">
+     <div class="generos">
+     <h3>Series Agregadas </h3>
+     <div class="ver">
+       <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+     </div>
+     </div>
+      <div class="slider">
+        
+<a href="series/alquimia de almas/info.html"><div class="int" style="background-image: url('https://elcomercio.pe/resizer/SGWWaId332E6vRRZPshCx_MVMTQ=/620x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/QRXVHPHV4JCSDDD3CI7IGPAI3Y.png');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Alquimia de almas</h4>
+   <div class="es">
+    <h5>Serie</h5>
+   
+    <p> 2022</p>
+  </div>
+    
+        </div></a>        
+                
+        
+         
+<a href="series/hawkeye.html"><div class="int" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMGQ1OWNlY2QtMGY1NC00ZDkxLWJhZTktMzg5Mzk5YWY1YzA1XkEyXkFqcGdeQXVyMTU5OTc2NTk@._V1_FMjpg_UX1000_.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Hawkeye</h4>
+   <div class="es">
+    <h5>Serie</h5>
+   
+    <p> 2022</p>
+  </div>
+    
+        </div></a>
+        
+
+       
+<a href="series/lockwood.html"><div class="int" style="background-image: url('https://m.media-amazon.com/images/M/MV5BZjlhMzZlMGYtYjZkYi00NmFjLWI1N2YtZTYxM2Y3OWIyZTU1XkEyXkFqcGdeQXVyMTMzNzIyNDc1._V1_.jpg');">
+  <p id="gen">Fantasía/Acción</p>
+  <h4>Lockwood & Co.</h4>
+  <div class="es">
+    <h5>Serie</h5>
+    
+    <p>2022</p>
+  </div>
+      </div></a>
+       
+<div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/scream-cover-q7d.jpg');">
+  <h4>Scream</h4>
+  <div class="es">
+    <h5>película</h5>
+   
+    <p> 2022</p>
+  </div>
+       </div>
+       
+
+       
+       
+     </div>
+   </div>
+   
+   <div class="caja">
+     <div class="generos">
+     <h3>Acción / Ciencia ficción</h3>
+       <div class="ver">
+       <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+     </div>
+     </div>
+      <div class="slider">
+         
+<a href="peliculas/alita.html"><div class="int" style="background-image: url('https://lumiere-a.akamaihd.net/v1/images/p_alita_battle_angel_20cs_da903cc8.jpeg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Alita: Battle Angel</h4>
+      <div class="es">
+        <h5>película</h5>
+     
+        <p> 2019</p>
+      </div>
+        </div></a>
+       
+      
+<a href="peliculas/que le paso a lunes.html"><div class="int" style="background-image: url('https://tecolotito.elsiglodetorreon.com.mx/blogs/163304/2021/03/6053d5ec37af1.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Que le pasó a lunes</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2017</p>
+     </div>
+       </div></a>  
+       
+   <a href="peliculas/morbius.html"><div class="int" style="background-image: url('https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/title-key-art/morbius_onesheet_1400x2100_he.jpg?itok=-jQVkWIe');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Morvius</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2022</p>
+     </div>
+      </div></a>    
+       
+<a href="peliculas/bloodshot.html"><div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/bloodshot-cover-3gd.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+         <h4>Bloodshot</h4>
+          <div class="es">
+            <h5>película</h5>
+         
+            <p> 2020</p>
+          </div>
+       </div></a>
+       
+       
+<a href="peliculas/rampage.html"><div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/rampage-devastacion-cover-71o.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Rampage Devastación</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2018</p>
+     </div>
+       </div></a>
+       
+              
+<a href="peliculas/godzilla vs kong.html"><div class="int" style="background-image: url('https://eastxray.com/wp-content/uploads/2021/05/kongposter-1.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Godzilla vs Kingkong</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2021</p>
+     </div>
+       </div></a>
+       
+              
+<a href="peliculas/elysium.html"><div class="int" style="background-image: url('https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/chameleon/title-movie/462025_Elysium_1400x2100_English_US.jpg?itok=vtCo9yxU');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>Elysium</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2013</p>
+     </div>
+       </div></a
+       
+       
+<a href="peliculas/resident evil final.html"><div class="int" style="background-image: url('https://cdn.chili.com/images/public/cms/2b/15/79/f5/2b1579f5-df89-4887-8dee-0fe71e6761ee.jpg?width=800');">
+  <p id="gen">Terror/Acción</p>
+  <h4>Resident Evil Capitulo Final</h4>
+  <div class="es">
+  <h5>película</h5>
+    <p> 2013</p>
+     </div>
+       </div></a>
+       
+       
+       
+       
+     </div>
+   </div>
+   
+   
+      <div class="caja">
+     <div class="generos">
+     <h3>Terror / Suspenso </h3>
+  <div class="ver">
+         <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+       </div>
+     </div>
+      <div class="slider">
+         
+<a href="peliculas/megan.html"><div class="int" style="background-image: url('https://amc-theatres-res.cloudinary.com/v1673614330/amc-cdn/production/2/movies/65800/65813/Poster/Primary_BoxCover_HD_800_1200.jpg');">
+  <p id="gen">Terror/Ciencia ficción</p>
+  <h4>Megan</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2023</p>
+     </div>
+        </div></a>
+       
+<a href="peliculas/la maldicion 2021.html"><div class="int" style="background-image: url('https://elcomercio.pe/resizer/gEfsjx86DvP6ijT0VKDvRNem2mM=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/YRKBITDRMVE25I5DFWWJGLLTBY.jpg');">
+  <p id="gen">Terror/Fantasía</p>
+  <h4>La Maldición: el despertar de los muertos</h4>
+    <div class="es">
+      <h5>película</h5>
+   
+      <p> 2022</p>
+    </div>
+      </div></a>
+      
+      <a href="peliculas/la niñera.html"><div class="int" style="background-image: url('https://www.lavanguardia.com/peliculas-series/images/movie/poster/2022/11/w1280/dubugvrxYazuwzHuh6NCxauIl1L.jpg');">
+  <p id="gen">Terror/Drama</p>
+  <h4>La Niñera</h4>
+   <div class="es">
+     <h5>película</h5>
+  
+     <p> 2022</p>
+   </div>
+       </div></a>
+       
+<a href="peliculas/scream5.html"><div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/scream-cover-q7d.jpg');">
+  <p id="gen">Terror/Suspenso</p>
+  <h4>Scream</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2022</p>
+     </div>
+       </div></a>
+       
+<a href="peliculas/la maldicion vs el aro.html"><div class="int" style="background-image: url('https://s3-eu-west-1.amazonaws.com/abandomedia/db/poster/db_posters_55133.jpg');">
+  <p id="gen">Terror/Suspenso</p>
+  <h4>La batalla de los espíritus: El Aro vs. La Maldición</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2022</p>
+     </div>
+       </div></a>       
+       
+
+       
+       
+     </div>
+   </div>
+   
+   
+   <div class="caja kit">
+     <div class="generos">
+     <h3>Romance / Comedia / </h3>
+  <div class="ver">
+         <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+       </div>
+     </div>
+      <div class="slider">
+         
+<div class="int" style="background-image: url('https://lumiere-a.akamaihd.net/v1/images/p_alita_battle_angel_20cs_da903cc8.jpeg');">
+  <h4>Alita: Battle Angel</h4>
+     <p>Año: 2022</p>
+        </div>
+       
+<div class="int" style="background-image: url('https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/title-key-art/morbius_onesheet_1400x2100_he.jpg?itok=-jQVkWIe');">
+  <h4>Morvius</h4>
+    <p>Año: 2022</p>
+      </div>
+       
+<div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/scream-cover-q7d.jpg');">
+  <h4>Scream</h4>
+    <p>Año: 2022</p>
+       </div>
+       
+       
+       
+     </div>
+   </div>
+   
+   
+   <div class="caja kit">
+     <div class="generos">
+     <h3>Korea / Japón/ Live Acción</h3>
+  <div class="ver">
+         <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+       </div>
+     </div>
+      <div class="slider">
+         
+<div class="int" style="background-image: url('https://lumiere-a.akamaihd.net/v1/images/p_alita_battle_angel_20cs_da903cc8.jpeg');">
+  <h4>Alita: Battle Angel</h4>
+     <p>Año: 2022</p>
+        </div>
+       
+<div class="int" style="background-image: url('https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/title-key-art/morbius_onesheet_1400x2100_he.jpg?itok=-jQVkWIe');">
+  <h4>Morvius</h4>
+    <p>Año: 2022</p>
+      </div>
+       
+<div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/scream-cover-q7d.jpg');">
+  <h4>Scream 5</h4>
+    <p>Año: 2022</p>
+       </div>
+       
+       
+       
+     </div>
+   </div>
+   
+   
+   <div class="caja kit">
+     <div class="generos">
+     <h3>Súper héroes / Marvel/ cómics</h3>
+  <div class="ver">
+         <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+       </div>
+     </div>
+      <div class="slider">
+         
+<div class="int" style="background-image: url('https://lumiere-a.akamaihd.net/v1/images/p_alita_battle_angel_20cs_da903cc8.jpeg');">
+  <h4>Alita: Battle Angel</h4>
+     <p>Año: 2022</p>
+        </div>
+       
+<div class="int" style="background-image: url('https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/title-key-art/morbius_onesheet_1400x2100_he.jpg?itok=-jQVkWIe');">
+  <h4>Morvius</h4>
+    <p>Año: 2022</p>
+      </div>
+       
+<div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/scream-cover-q7d.jpg');">
+  <h4>Scream</h4>
+    <p>Año: 2022</p>
+       </div>
+       
+       
+       
+     </div>
+   </div>
+   
+      <div class="caja">
+     <div class="generos">
+     <h3>Animación</h3>
+  <div class="ver">
+         <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+       </div>
+     </div>
+      <div class="slider">
+         
+<a href="peliculas/minions4.html"><div class="int" style="background-image: url('https://www.eldiario.net/portal/wp-content/uploads/2022/07/La-historia-de-Minions-nace-un-villano-scaled.jpg');">
+  <p id="gen">Comedia/Aventura</p>
+  <h4>Minions: Nace un villano (2022)</h4>
+  <div class="es">
+        <h5>película</h5>
+    
+        <p> 2022</p>
+      </div>
+        </div></a>
+       
+<a href="peliculas/dc super mascotas.html"><div class="int" style="background-image: url('https://cineslanzarote.com/wp-content/uploads/2022/07/dc_liga_supermascotas-360x618_c.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>DC Liga De Súpermascotas</h4>
+  
+    <div class="es">
+    <h5>película</h5>
+   
+    <p> 2022</p>
+  </div>
+  </div></a>
+     
+       
+<a href="peliculas/mega mente.html"><div class="int" style="background-image: url('https://static.wikia.nocookie.net/mega-mind/images/d/db/Megamind_%28film%29.jpg');">
+  <p id="gen">Comedia/Infantil</p>
+  <h4>Mega Mente</h4>
+     <div class="es">
+        <h5>película</h5>
+        <p> 2010</p>
+        </div>
+      </div></a>
+       
+           
+<a href="peliculas/el gato con botas.html"><div class="int" style="background-image: url('https://la-lista.com/wp-content/uploads/2022/12/estreno-gato-con-botas.jpg');">
+  <p id="gen">Ciencia ficción/Acción</p>
+  <h4>El gato con botas el último deseo</h4>
+     <div class="es">
+       <h5>película</h5>
+    
+       <p> 2022</p>
+     </div>
+      </div></a>
+       
+     </div>
+      </div>
+   
+   <div class="caja kit">
+        <div class="generos">
+          <h3>Zombies / Vampiros/ Apocalipsis</h3>
+  <div class="ver">
+              <img src="https://i0.wp.com/www.kaser.com.ar/img/Icono_Vermas_esp.png" alt="">
+            </div>
+        </div>
+        <div class="slider">
+   
+          <div class="int" style="background-image: url('https://lumiere-a.akamaihd.net/v1/images/p_alita_battle_angel_20cs_da903cc8.jpeg');">
+            <h4>Alita: Battle Angel</h4>
+            <p>Año: 2022</p>
+          </div>
+   
+          <div class="int" style="background-image: url('https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/title-key-art/morbius_onesheet_1400x2100_he.jpg?itok=-jQVkWIe');">
+            <h4>Morvius</h4>
+            <p>Año: 2022</p>
+          </div>
+   
+          <div class="int" style="background-image: url('https://www.peliculas-hd.net/storage/movies_tumbl/scream-cover-q7d.jpg');">
+            <h4>Scream</h4>
+            <p>Año: 2022</p>
+          </div>
+   
+   
+   
+        </div>
+      </div>
+   
+ </div> 
+ 
+   <div class="ventana ocult">
+     
+        
+<div class="brave">
+  <p id="vent">X</p>
+     <p>Atención para el buen funcionamiento de esta app es necesaria la instalación del navegador brave y ponerlo predeterminado para evitar la publicidad proporcionada por los servicios gratuitos, si no sabes como ponerlo predeterminado ve el tutorial.</p>
+     <div class="b_int">
+     <a href="https://play.google.com/store/apps/details?id=com.brave.browser" target="blank">Instalar Brave</a>
+     <button id="tuto" data-link="https://youtube.com/embed/qhqd0x8JPOw">Ver tutorial</button>
+     </div>
+   </div>
+     
+   </div>
+ 
+<div id="info" class="inform quitar">
+  <div class="botones">
+  <p id="c_r">X</p>
+  <button data-link="info.html">!</button>
+  <button class="btn2" data-link="https://youtu.be/qhqd0x8JPOw">tutorial</button>
+  </div>
+  <iframe id="capa" src="info.html" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+ <style>
+   .text #cop{
+     background: #3A3A3A;
+     width: 100%;
+   }
+ </style>
+ 
+ 
+ 
+  <script>
+  var botones = document.getElementsByTagName("button"),
+    iframe = document.getElementById("capa"),
+    sizeBotones = botones.length;
+ 
+for (i = 0; i < sizeBotones; i++){
+    botones[i].addEventListener("click", function(){
+        iframe.src = this.getAttribute("data-link");
+    }, false);
+    
+    
+} 
+   
+   const open = document.querySelector('#open');
+  open.addEventListener('click', (e) => {
+    ctn.classList.toggle('ms');
+  body.classList.toggle('kit');
+ 
+  });
+  
+  const btn1 = document.querySelector('#btn1');
+  btn1.addEventListener('click', (e) => {
+    ctn.classList.toggle('ms');
+  body.classList.toggle('kit');
+ 
+  }); 
+  
+  const conn = document.querySelector('#c_r');
+  conn.addEventListener('click', (e) => {
+ 
+  info.classList.toggle('quitar');
+ 
+  });    
+  
+  const fip = document.querySelector('#inf');
+  fip.addEventListener('click', (e) => {
+ 
+  info.classList.toggle('quitar');
+ 
+  });   
+    
+const tutorial = document.querySelector('#tuto');
+  tutorial.addEventListener('click', (e) => {
+ 
+  info.classList.toggle('quitar');
+ 
+  });   
+    
+  </script>
+ 
+  <!-- Project -->
+  <script src="js/search.js"></script>
+</body>
+</html>
