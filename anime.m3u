@@ -1,0 +1,36 @@
+#EXTM3U
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrynwF6hsAoIKABw40oHpz5Kt-DFkeV13vP9Qg65b_hg&s=10", Dan da dan
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/dandadan.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoEVi84xvPIuW0qCm7Pyq7HjdUszIykXz11aTolrIkOQ&s=10", 11 Eyes
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/11eyes.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfQCm5Rmt2rOxiD3hhLoLDGnOwI8xm0dFqdE7m5ehjQ&s=10", Afro samurái 
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/afrosamurai.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg-RQJpQSqaCxFmzg_T5Ncv3BGD_EhTPoCkFTw9LYo4w&s=10", AGGRETSUKO
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/AGGRETSUKO.m3u
+
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBap_Aaofty8IShg5HtyMyfb3QMdOcjhxq_OV6ckeLg&s=10", Ajin
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/ajin.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXTr_s5dnyBt9uKHpwSOI0hYcLKdIZ9vrZPiYk_e6aXw&s=10", Angel beats
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/angelbeats.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBOm6Cdeb4UjYyNvtBzgqiEbLnzQYmgn4s4tMOoA2pig&s=10", Anohana: The Flower We Saw That Day
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/anohana.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgkc85dvHhu_PEgqZLvjXqtVLk4Zgj_sMElQh5Y3rURg&s=10", Another
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/another.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EtxXP_4RFUaB_1cmwAk89bP7uWWNIDTsOtyNmCyrhw&s=10", Aoki Hagane no Arpeggio: Ars Nova (Arpeggio of Blue Steel)
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/AOKIHAGANE.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWLQ-RWgF9PPQgSSABbJmTrz8Mli5g9HJCEl-rBqh97w&s=10", Asobi Asobase
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/asobiasobase.m3u
+
+#EXTINF:-1 group-title="Opciones de reproducción" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyOIFTNWEDgV_iUW9P2gGGwcAeIdoqOMgGdoxg-CQe6A&s=10", ASSASSINATION
+http://zonaplay.mywebcommunity.org/smd/archivos/amime/hls/ASSASSINATION.m3u
+
